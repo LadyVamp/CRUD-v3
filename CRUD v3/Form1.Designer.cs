@@ -1,6 +1,6 @@
 ﻿namespace CRUD_v3
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -32,69 +32,44 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.tFileBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchBaseDataSetTFileWithoutID = new CRUD_v3.SearchBaseDataSetTFileWithoutID();
-            this.tFileTableAdapter = new CRUD_v3.SearchBaseDataSetTFileWithoutIDTableAdapters.TFileTableAdapter();
-            this.btnAllFiles = new MetroFramework.Controls.MetroButton();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.keywordsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tFileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchBaseDataSetTFileWithoutID = new CRUD_v3.SearchBaseDataSetTFileWithoutID();
+            this.tFileTableAdapter = new CRUD_v3.SearchBaseDataSetTFileWithoutIDTableAdapters.TFileTableAdapter();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileWithoutID)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(234, 1);
-            this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.CustomButton.TabIndex = 1;
-            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearch.CustomButton.UseSelectable = true;
-            this.txtSearch.CustomButton.Visible = false;
-            this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(13, 84);
-            this.txtSearch.MaxLength = 32767;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.SelectionLength = 0;
-            this.txtSearch.SelectionStart = 0;
-            this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(256, 23);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(285, 84);
+            this.btnSearch.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSearch.ForeColor = System.Drawing.Color.Navy;
+            this.btnSearch.Location = new System.Drawing.Point(218, 84);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 23);
+            this.btnSearch.Size = new System.Drawing.Size(87, 26);
+            this.btnSearch.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Поиск";
+            this.btnSearch.UseCustomForeColor = true;
             this.btnSearch.UseSelectable = true;
+            this.btnSearch.UseStyleColors = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // metroGrid1
             // 
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.AutoGenerateColumns = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.White;
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -124,7 +99,7 @@
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.White;
-            this.metroGrid1.Location = new System.Drawing.Point(23, 181);
+            this.metroGrid1.Location = new System.Drawing.Point(23, 212);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -140,30 +115,6 @@
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(746, 242);
             this.metroGrid1.TabIndex = 2;
-            // 
-            // tFileBindingSource
-            // 
-            this.tFileBindingSource.DataMember = "TFile";
-            this.tFileBindingSource.DataSource = this.searchBaseDataSetTFileWithoutID;
-            // 
-            // searchBaseDataSetTFileWithoutID
-            // 
-            this.searchBaseDataSetTFileWithoutID.DataSetName = "SearchBaseDataSetTFileWithoutID";
-            this.searchBaseDataSetTFileWithoutID.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tFileTableAdapter
-            // 
-            this.tFileTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnAllFiles
-            // 
-            this.btnAllFiles.Location = new System.Drawing.Point(611, 133);
-            this.btnAllFiles.Name = "btnAllFiles";
-            this.btnAllFiles.Size = new System.Drawing.Size(93, 23);
-            this.btnAllFiles.TabIndex = 3;
-            this.btnAllFiles.Text = "Все файлы";
-            this.btnAllFiles.UseSelectable = true;
-            this.btnAllFiles.Click += new System.EventHandler(this.btnAllFiles_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -195,17 +146,74 @@
             this.contentDataGridViewTextBoxColumn.HeaderText = "Содержание";
             this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
             // 
-            // Form1
+            // tFileBindingSource
             // 
+            this.tFileBindingSource.DataMember = "TFile";
+            this.tFileBindingSource.DataSource = this.searchBaseDataSetTFileWithoutID;
+            // 
+            // searchBaseDataSetTFileWithoutID
+            // 
+            this.searchBaseDataSetTFileWithoutID.DataSetName = "SearchBaseDataSetTFileWithoutID";
+            this.searchBaseDataSetTFileWithoutID.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tFileTableAdapter
+            // 
+            this.tFileTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.CustomButton.Image = null;
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(169, 2);
+            this.txtSearch.CustomButton.Name = "";
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.CustomButton.TabIndex = 1;
+            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtSearch.CustomButton.UseSelectable = true;
+            this.txtSearch.CustomButton.Visible = false;
+            this.txtSearch.DisplayIcon = true;
+            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(23, 84);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PromptText = "Введите название";
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.ShortcutsEnabled = true;
+            this.txtSearch.ShowClearButton = true;
+            this.txtSearch.Size = new System.Drawing.Size(193, 26);
+            this.txtSearch.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.UseCustomBackColor = true;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.UseStyleColors = true;
+            this.txtSearch.WaterMark = "Введите название";
+            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // MainForm
+            // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(772, 477);
-            this.Controls.Add(this.btnAllFiles);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearch);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.Text = "MainForm";
+            this.TransparencyKey = System.Drawing.Color.DarkBlue;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).EndInit();
@@ -215,19 +223,17 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTextBox txtSearch;
         private MetroFramework.Controls.MetroButton btnSearch;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private SearchBaseDataSetTFileWithoutID searchBaseDataSetTFileWithoutID;
         private System.Windows.Forms.BindingSource tFileBindingSource;
         private SearchBaseDataSetTFileWithoutIDTableAdapters.TFileTableAdapter tFileTableAdapter;
-        private MetroFramework.Controls.MetroButton btnAllFiles;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn keywordsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn formatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroTextBox txtSearch;
     }
 }
 

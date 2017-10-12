@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace CRUD_v3
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class MainForm : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -42,16 +42,7 @@ namespace CRUD_v3
             }
         }
 
-        //Заполнить grid таблицей TFile, кнопка "Все файлы"
-        private void btnAllFiles_Click(object sender, EventArgs e)
-        {
-            string connect = "Data Source=DESKTOP-O9H5H8N;Initial Catalog=SearchBase;Integrated Security=True";
-            DataSet ds = new DataSet();
-            SqlConnection dataBaseConnection = new SqlConnection(connect);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM TFile", dataBaseConnection);
-            dataAdapter.Fill(ds, "TFile");
-            metroGrid1.DataSource = ds.Tables["TFile"];
-        }
+        
 
     }
     }
