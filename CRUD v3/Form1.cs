@@ -43,25 +43,26 @@ namespace CRUD_v3
             }
         }
 
-        private void cbDoc_CheckedChanged(object sender, EventArgs e)
+        //Радиокнопки по формату
+        private void rbDoc_CheckedChanged(object sender, EventArgs e)
         {
             tFileBindingSource.Filter = null;
             this.tFileBindingSource.Filter = "(format LIKE 'doc')";
         }
 
-        private void cbDocx_CheckedChanged(object sender, EventArgs e)
+        private void rbDocx_CheckedChanged(object sender, EventArgs e)
         {
             tFileBindingSource.Filter = null;
             this.tFileBindingSource.Filter = "(format LIKE 'docx')";
         }
 
-        private void cbTxt_CheckedChanged(object sender, EventArgs e)
+        private void rbTxt_CheckedChanged(object sender, EventArgs e)
         {
             tFileBindingSource.Filter = null;
             this.tFileBindingSource.Filter = "(format LIKE 'txt')";
         }
 
-        private void cbRtf_CheckedChanged(object sender, EventArgs e)
+        private void rbRtf_CheckedChanged(object sender, EventArgs e)
         {
             tFileBindingSource.Filter = null;
             this.tFileBindingSource.Filter = "(format LIKE 'rtf')";

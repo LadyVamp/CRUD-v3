@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
@@ -44,10 +44,10 @@
             this.searchBaseDataSetTFileWithoutID = new CRUD_v3.SearchBaseDataSetTFileWithoutID();
             this.tFileTableAdapter = new CRUD_v3.SearchBaseDataSetTFileWithoutIDTableAdapters.TFileTableAdapter();
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
-            this.cbDoc = new MetroFramework.Controls.MetroCheckBox();
-            this.cbDocx = new MetroFramework.Controls.MetroCheckBox();
-            this.cbTxt = new MetroFramework.Controls.MetroCheckBox();
-            this.cbRtf = new MetroFramework.Controls.MetroCheckBox();
+            this.rbDoc = new MetroFramework.Controls.MetroRadioButton();
+            this.rbTxt = new MetroFramework.Controls.MetroRadioButton();
+            this.rbDocx = new MetroFramework.Controls.MetroRadioButton();
+            this.rbRtf = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileWithoutID)).BeginInit();
@@ -76,14 +76,14 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
@@ -92,28 +92,28 @@
             this.formatDataGridViewTextBoxColumn,
             this.contentDataGridViewTextBoxColumn});
             this.metroGrid1.DataSource = this.tFileBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle23;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.White;
             this.metroGrid1.Location = new System.Drawing.Point(23, 212);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -204,49 +204,53 @@
             this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // cbDoc
+            // rbDoc
             // 
-            this.cbDoc.AutoSize = true;
-            this.cbDoc.Location = new System.Drawing.Point(23, 139);
-            this.cbDoc.Name = "cbDoc";
-            this.cbDoc.Size = new System.Drawing.Size(49, 17);
-            this.cbDoc.TabIndex = 6;
-            this.cbDoc.Text = ".doc";
-            this.cbDoc.UseSelectable = true;
-            this.cbDoc.CheckedChanged += new System.EventHandler(this.cbDoc_CheckedChanged);
+            this.rbDoc.Location = new System.Drawing.Point(26, 130);
+            this.rbDoc.Name = "rbDoc";
+            this.rbDoc.Size = new System.Drawing.Size(70, 25);
+            this.rbDoc.Style = MetroFramework.MetroColorStyle.Black;
+            this.rbDoc.TabIndex = 10;
+            this.rbDoc.Text = ".doc";
+            this.rbDoc.UseSelectable = true;
+            this.rbDoc.UseStyleColors = true;
+            this.rbDoc.CheckedChanged += new System.EventHandler(this.rbDoc_CheckedChanged);
             // 
-            // cbDocx
+            // rbTxt
             // 
-            this.cbDocx.AutoSize = true;
-            this.cbDocx.Location = new System.Drawing.Point(98, 139);
-            this.cbDocx.Name = "cbDocx";
-            this.cbDocx.Size = new System.Drawing.Size(55, 17);
-            this.cbDocx.TabIndex = 7;
-            this.cbDocx.Text = ".docx";
-            this.cbDocx.UseSelectable = true;
-            this.cbDocx.CheckedChanged += new System.EventHandler(this.cbDocx_CheckedChanged);
+            this.rbTxt.Location = new System.Drawing.Point(26, 163);
+            this.rbTxt.Name = "rbTxt";
+            this.rbTxt.Size = new System.Drawing.Size(70, 25);
+            this.rbTxt.Style = MetroFramework.MetroColorStyle.Black;
+            this.rbTxt.TabIndex = 11;
+            this.rbTxt.Text = ".txt";
+            this.rbTxt.UseSelectable = true;
+            this.rbTxt.UseStyleColors = true;
+            this.rbTxt.CheckedChanged += new System.EventHandler(this.rbTxt_CheckedChanged);
             // 
-            // cbTxt
+            // rbDocx
             // 
-            this.cbTxt.AutoSize = true;
-            this.cbTxt.Location = new System.Drawing.Point(23, 172);
-            this.cbTxt.Name = "cbTxt";
-            this.cbTxt.Size = new System.Drawing.Size(41, 17);
-            this.cbTxt.TabIndex = 8;
-            this.cbTxt.Text = ".txt";
-            this.cbTxt.UseSelectable = true;
-            this.cbTxt.CheckedChanged += new System.EventHandler(this.cbTxt_CheckedChanged);
+            this.rbDocx.Location = new System.Drawing.Point(114, 130);
+            this.rbDocx.Name = "rbDocx";
+            this.rbDocx.Size = new System.Drawing.Size(70, 25);
+            this.rbDocx.Style = MetroFramework.MetroColorStyle.Black;
+            this.rbDocx.TabIndex = 12;
+            this.rbDocx.Text = ".docx";
+            this.rbDocx.UseSelectable = true;
+            this.rbDocx.UseStyleColors = true;
+            this.rbDocx.CheckedChanged += new System.EventHandler(this.rbDocx_CheckedChanged);
             // 
-            // cbRtf
+            // rbRtf
             // 
-            this.cbRtf.AutoSize = true;
-            this.cbRtf.Location = new System.Drawing.Point(98, 172);
-            this.cbRtf.Name = "cbRtf";
-            this.cbRtf.Size = new System.Drawing.Size(40, 17);
-            this.cbRtf.TabIndex = 9;
-            this.cbRtf.Text = ".rtf";
-            this.cbRtf.UseSelectable = true;
-            this.cbRtf.CheckedChanged += new System.EventHandler(this.cbRtf_CheckedChanged);
+            this.rbRtf.Location = new System.Drawing.Point(114, 161);
+            this.rbRtf.Name = "rbRtf";
+            this.rbRtf.Size = new System.Drawing.Size(70, 25);
+            this.rbRtf.Style = MetroFramework.MetroColorStyle.Black;
+            this.rbRtf.TabIndex = 13;
+            this.rbRtf.Text = ".rtf";
+            this.rbRtf.UseSelectable = true;
+            this.rbRtf.UseStyleColors = true;
+            this.rbRtf.CheckedChanged += new System.EventHandler(this.rbRtf_CheckedChanged);
             // 
             // MainForm
             // 
@@ -255,10 +259,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(772, 477);
-            this.Controls.Add(this.cbRtf);
-            this.Controls.Add(this.cbTxt);
-            this.Controls.Add(this.cbDocx);
-            this.Controls.Add(this.cbDoc);
+            this.Controls.Add(this.rbRtf);
+            this.Controls.Add(this.rbDocx);
+            this.Controls.Add(this.rbTxt);
+            this.Controls.Add(this.rbDoc);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.btnSearch);
@@ -271,7 +275,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileWithoutID)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -287,10 +290,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn formatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroTextBox txtSearch;
-        private MetroFramework.Controls.MetroCheckBox cbDoc;
-        private MetroFramework.Controls.MetroCheckBox cbDocx;
-        private MetroFramework.Controls.MetroCheckBox cbTxt;
-        private MetroFramework.Controls.MetroCheckBox cbRtf;
+        private MetroFramework.Controls.MetroRadioButton rbDoc;
+        private MetroFramework.Controls.MetroRadioButton rbTxt;
+        private MetroFramework.Controls.MetroRadioButton rbDocx;
+        private MetroFramework.Controls.MetroRadioButton rbRtf;
     }
 }
 
