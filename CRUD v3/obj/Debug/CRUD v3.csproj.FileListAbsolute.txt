@@ -10,3 +10,6 @@ c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\C
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD v3.exe
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD v3.pdb
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.MainForm.resources
+C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.Login.resources
+C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.MainAP.resources
+C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.AdminSP.resources

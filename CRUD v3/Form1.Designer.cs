@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
@@ -48,9 +48,12 @@
             this.rbTxt = new MetroFramework.Controls.MetroRadioButton();
             this.rbDocx = new MetroFramework.Controls.MetroRadioButton();
             this.rbRtf = new MetroFramework.Controls.MetroRadioButton();
+            this.panelFormats = new MetroFramework.Controls.MetroPanel();
+            this.btnCallFormLogin = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileWithoutID)).BeginInit();
+            this.panelFormats.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -76,14 +79,14 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
@@ -92,32 +95,32 @@
             this.formatDataGridViewTextBoxColumn,
             this.contentDataGridViewTextBoxColumn});
             this.metroGrid1.DataSource = this.tFileBindingSource;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle14;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.White;
             this.metroGrid1.Location = new System.Drawing.Point(23, 212);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(746, 242);
+            this.metroGrid1.Size = new System.Drawing.Size(726, 242);
             this.metroGrid1.TabIndex = 2;
             // 
             // nameDataGridViewTextBoxColumn
@@ -206,7 +209,7 @@
             // 
             // rbDoc
             // 
-            this.rbDoc.Location = new System.Drawing.Point(26, 130);
+            this.rbDoc.Location = new System.Drawing.Point(14, 12);
             this.rbDoc.Name = "rbDoc";
             this.rbDoc.Size = new System.Drawing.Size(70, 25);
             this.rbDoc.Style = MetroFramework.MetroColorStyle.Black;
@@ -218,7 +221,7 @@
             // 
             // rbTxt
             // 
-            this.rbTxt.Location = new System.Drawing.Point(26, 163);
+            this.rbTxt.Location = new System.Drawing.Point(14, 45);
             this.rbTxt.Name = "rbTxt";
             this.rbTxt.Size = new System.Drawing.Size(70, 25);
             this.rbTxt.Style = MetroFramework.MetroColorStyle.Black;
@@ -230,7 +233,7 @@
             // 
             // rbDocx
             // 
-            this.rbDocx.Location = new System.Drawing.Point(114, 130);
+            this.rbDocx.Location = new System.Drawing.Point(102, 12);
             this.rbDocx.Name = "rbDocx";
             this.rbDocx.Size = new System.Drawing.Size(70, 25);
             this.rbDocx.Style = MetroFramework.MetroColorStyle.Black;
@@ -242,7 +245,7 @@
             // 
             // rbRtf
             // 
-            this.rbRtf.Location = new System.Drawing.Point(114, 161);
+            this.rbRtf.Location = new System.Drawing.Point(102, 43);
             this.rbRtf.Name = "rbRtf";
             this.rbRtf.Size = new System.Drawing.Size(70, 25);
             this.rbRtf.Style = MetroFramework.MetroColorStyle.Black;
@@ -252,28 +255,55 @@
             this.rbRtf.UseStyleColors = true;
             this.rbRtf.CheckedChanged += new System.EventHandler(this.rbRtf_CheckedChanged);
             // 
+            // panelFormats
+            // 
+            this.panelFormats.Controls.Add(this.rbRtf);
+            this.panelFormats.Controls.Add(this.rbDocx);
+            this.panelFormats.Controls.Add(this.rbTxt);
+            this.panelFormats.Controls.Add(this.rbDoc);
+            this.panelFormats.HorizontalScrollbarBarColor = true;
+            this.panelFormats.HorizontalScrollbarHighlightOnWheel = false;
+            this.panelFormats.HorizontalScrollbarSize = 10;
+            this.panelFormats.Location = new System.Drawing.Point(23, 127);
+            this.panelFormats.Name = "panelFormats";
+            this.panelFormats.Size = new System.Drawing.Size(200, 79);
+            this.panelFormats.TabIndex = 14;
+            this.panelFormats.VerticalScrollbarBarColor = true;
+            this.panelFormats.VerticalScrollbarHighlightOnWheel = false;
+            this.panelFormats.VerticalScrollbarSize = 10;
+            // 
+            // btnCallFormLogin
+            // 
+            this.btnCallFormLogin.Location = new System.Drawing.Point(541, 469);
+            this.btnCallFormLogin.Name = "btnCallFormLogin";
+            this.btnCallFormLogin.Size = new System.Drawing.Size(208, 23);
+            this.btnCallFormLogin.TabIndex = 15;
+            this.btnCallFormLogin.Text = "Вход для администратора";
+            this.btnCallFormLogin.UseSelectable = true;
+            this.btnCallFormLogin.Click += new System.EventHandler(this.btnCallFormLogin_Click);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(772, 477);
-            this.Controls.Add(this.rbRtf);
-            this.Controls.Add(this.rbDocx);
-            this.Controls.Add(this.rbTxt);
-            this.Controls.Add(this.rbDoc);
+            this.ClientSize = new System.Drawing.Size(772, 515);
+            this.Controls.Add(this.btnCallFormLogin);
+            this.Controls.Add(this.panelFormats);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.btnSearch);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.Resizable = false;
             this.Text = "MainForm";
             this.TransparencyKey = System.Drawing.Color.DarkBlue;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileWithoutID)).EndInit();
+            this.panelFormats.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -294,6 +324,8 @@
         private MetroFramework.Controls.MetroRadioButton rbTxt;
         private MetroFramework.Controls.MetroRadioButton rbDocx;
         private MetroFramework.Controls.MetroRadioButton rbRtf;
+        private MetroFramework.Controls.MetroPanel panelFormats;
+        private MetroFramework.Controls.MetroButton btnCallFormLogin;
     }
 }
 

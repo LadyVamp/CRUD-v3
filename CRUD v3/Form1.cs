@@ -67,5 +67,11 @@ namespace CRUD_v3
             tFileBindingSource.Filter = null;
             this.tFileBindingSource.Filter = "(format LIKE 'rtf')";
         }
+
+        private void btnCallFormLogin_Click(object sender, EventArgs e)
+        {
+            Login f = new Login();
+            f.Show();
+        }
     }
     }
