@@ -213,5 +213,33 @@ namespace CRUD_v3
 
 
 
+        //private void SPGrid_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    SPGrid.Rows[0].Cells["regularExpression"].Value = txtRegExp.Text;
+        //    SPGrid.Rows[0].Cells["compareWith"].Value = cmbCompare.Text;
+        //    SPGrid.Rows[0].Cells["action"].Value = cmbAction.Text;
+        //}
+
+        //private void SPGrid_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    txtRegExp.Text = SPGrid.Rows[0].Cells["regularExpression"].Value.ToString();
+        //    cmbCompare.Text = SPGrid.Rows[0].Cells["compareWith"].Value.ToString();
+        //    cmbAction.Text = SPGrid.Rows[0].Cells["action"].Value.ToString();
+        //}
+
+
+        // --- CRUD for File ---
+        //Размер только цифрами
+        private void txtSize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+
     }
 }
