@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileAP.Designer.cs">
+      <DependentUpon>FileAP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchBaseDataSetTSearchPattern.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FileAP.resx">
+      <DependentUpon>FileAP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
