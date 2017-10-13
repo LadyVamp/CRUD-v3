@@ -53,7 +53,23 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.GridFile = new MetroFramework.Controls.MetroGrid();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.btnDelFile = new MetroFramework.Controls.MetroButton();
+            this.btnViewFile = new MetroFramework.Controls.MetroButton();
+            this.btnUpdFile = new MetroFramework.Controls.MetroButton();
+            this.btnSaveFile = new MetroFramework.Controls.MetroButton();
+            this.txtContent = new System.Windows.Forms.RichTextBox();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.FileGrid = new MetroFramework.Controls.MetroGrid();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keywordsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCatalogDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tFileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchBaseDataSetTFile = new CRUD_v3.SearchBaseDataSetTFile();
             this.cmbFormat = new MetroFramework.Controls.MetroComboBox();
             this.txtKeywords = new MetroFramework.Controls.MetroTextBox();
             this.txtFileName = new MetroFramework.Controls.MetroTextBox();
@@ -66,23 +82,19 @@
             this.searchBaseDataSetTSearchPattern = new CRUD_v3.SearchBaseDataSetTSearchPattern();
             this.tSearchPatternTableAdapter = new CRUD_v3.SearchBaseDataSetTSearchPatternTableAdapters.TSearchPatternTableAdapter();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txtSize = new System.Windows.Forms.TextBox();
-            this.txtContent = new System.Windows.Forms.RichTextBox();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.btnDelF = new MetroFramework.Controls.MetroButton();
-            this.btnViewF = new MetroFramework.Controls.MetroButton();
-            this.btnUpdF = new MetroFramework.Controls.MetroButton();
-            this.btnSaveF = new MetroFramework.Controls.MetroButton();
+            this.tFileTableAdapter = new CRUD_v3.SearchBaseDataSetTFileTableAdapters.TFileTableAdapter();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SPGrid)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridFile)).BeginInit();
+            this.metroPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FileGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSearchPatternBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTSearchPattern)).BeginInit();
-            this.metroPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -377,7 +389,7 @@
             this.metroTabPage2.Controls.Add(this.metroPanel3);
             this.metroTabPage2.Controls.Add(this.txtContent);
             this.metroTabPage2.Controls.Add(this.txtSize);
-            this.metroTabPage2.Controls.Add(this.GridFile);
+            this.metroTabPage2.Controls.Add(this.FileGrid);
             this.metroTabPage2.Controls.Add(this.cmbFormat);
             this.metroTabPage2.Controls.Add(this.txtKeywords);
             this.metroTabPage2.Controls.Add(this.txtFileName);
@@ -403,13 +415,111 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // GridFile
+            // metroPanel3
             // 
-            this.GridFile.AllowUserToResizeRows = false;
-            this.GridFile.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridFile.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridFile.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.metroPanel3.Controls.Add(this.btnDelFile);
+            this.metroPanel3.Controls.Add(this.btnViewFile);
+            this.metroPanel3.Controls.Add(this.btnUpdFile);
+            this.metroPanel3.Controls.Add(this.btnSaveFile);
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(0, 242);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(302, 122);
+            this.metroPanel3.TabIndex = 4;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // btnDelFile
+            // 
+            this.btnDelFile.BackColor = System.Drawing.Color.Teal;
+            this.btnDelFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelFile.BackgroundImage")));
+            this.btnDelFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDelFile.ForeColor = System.Drawing.Color.White;
+            this.btnDelFile.Location = new System.Drawing.Point(149, 5);
+            this.btnDelFile.Name = "btnDelFile";
+            this.btnDelFile.Size = new System.Drawing.Size(103, 30);
+            this.btnDelFile.TabIndex = 8;
+            this.btnDelFile.Text = "  Delete";
+            this.btnDelFile.UseCustomBackColor = true;
+            this.btnDelFile.UseCustomForeColor = true;
+            this.btnDelFile.UseSelectable = true;
+            this.btnDelFile.UseStyleColors = true;
+            // 
+            // btnViewFile
+            // 
+            this.btnViewFile.BackColor = System.Drawing.Color.Teal;
+            this.btnViewFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewFile.BackgroundImage")));
+            this.btnViewFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnViewFile.ForeColor = System.Drawing.Color.White;
+            this.btnViewFile.Location = new System.Drawing.Point(15, 82);
+            this.btnViewFile.Name = "btnViewFile";
+            this.btnViewFile.Size = new System.Drawing.Size(103, 30);
+            this.btnViewFile.TabIndex = 7;
+            this.btnViewFile.Text = " View";
+            this.btnViewFile.UseCustomBackColor = true;
+            this.btnViewFile.UseCustomForeColor = true;
+            this.btnViewFile.UseSelectable = true;
+            this.btnViewFile.UseStyleColors = true;
+            // 
+            // btnUpdFile
+            // 
+            this.btnUpdFile.BackColor = System.Drawing.Color.Teal;
+            this.btnUpdFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdFile.BackgroundImage")));
+            this.btnUpdFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdFile.ForeColor = System.Drawing.Color.White;
+            this.btnUpdFile.Location = new System.Drawing.Point(15, 41);
+            this.btnUpdFile.Name = "btnUpdFile";
+            this.btnUpdFile.Size = new System.Drawing.Size(103, 30);
+            this.btnUpdFile.TabIndex = 6;
+            this.btnUpdFile.Text = "  Update";
+            this.btnUpdFile.UseCustomBackColor = true;
+            this.btnUpdFile.UseCustomForeColor = true;
+            this.btnUpdFile.UseSelectable = true;
+            this.btnUpdFile.UseStyleColors = true;
+            // 
+            // btnSaveFile
+            // 
+            this.btnSaveFile.BackColor = System.Drawing.Color.Teal;
+            this.btnSaveFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveFile.BackgroundImage")));
+            this.btnSaveFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSaveFile.ForeColor = System.Drawing.Color.White;
+            this.btnSaveFile.Location = new System.Drawing.Point(15, 5);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(103, 30);
+            this.btnSaveFile.TabIndex = 2;
+            this.btnSaveFile.Text = " Insert";
+            this.btnSaveFile.UseCustomBackColor = true;
+            this.btnSaveFile.UseCustomForeColor = true;
+            this.btnSaveFile.UseSelectable = true;
+            this.btnSaveFile.UseStyleColors = true;
+            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
+            // 
+            // txtContent
+            // 
+            this.txtContent.Location = new System.Drawing.Point(142, 168);
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(160, 54);
+            this.txtContent.TabIndex = 13;
+            this.txtContent.Text = "";
+            // 
+            // txtSize
+            // 
+            this.txtSize.Location = new System.Drawing.Point(142, 101);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(100, 22);
+            this.txtSize.TabIndex = 12;
+            // 
+            // FileGrid
+            // 
+            this.FileGrid.AllowUserToResizeRows = false;
+            this.FileGrid.AutoGenerateColumns = false;
+            this.FileGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.FileGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FileGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.FileGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -417,8 +527,17 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridFile.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.GridFile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FileGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.FileGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FileGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.keywordsDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.formatDataGridViewTextBoxColumn,
+            this.contentDataGridViewTextBoxColumn,
+            this.idCatalogDataGridViewTextBoxColumn});
+            this.FileGrid.DataSource = this.tFileBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -426,13 +545,13 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridFile.DefaultCellStyle = dataGridViewCellStyle5;
-            this.GridFile.EnableHeadersVisualStyles = false;
-            this.GridFile.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.GridFile.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridFile.Location = new System.Drawing.Point(334, 26);
-            this.GridFile.Name = "GridFile";
-            this.GridFile.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.FileGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FileGrid.EnableHeadersVisualStyles = false;
+            this.FileGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.FileGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.FileGrid.Location = new System.Drawing.Point(334, 26);
+            this.FileGrid.Name = "FileGrid";
+            this.FileGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -440,13 +559,66 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridFile.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.GridFile.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.GridFile.RowTemplate.Height = 24;
-            this.GridFile.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridFile.Size = new System.Drawing.Size(519, 338);
-            this.GridFile.Style = MetroFramework.MetroColorStyle.Teal;
-            this.GridFile.TabIndex = 11;
+            this.FileGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.FileGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.FileGrid.RowTemplate.Height = 24;
+            this.FileGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FileGrid.Size = new System.Drawing.Size(519, 338);
+            this.FileGrid.Style = MetroFramework.MetroColorStyle.Teal;
+            this.FileGrid.TabIndex = 11;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // keywordsDataGridViewTextBoxColumn
+            // 
+            this.keywordsDataGridViewTextBoxColumn.DataPropertyName = "keywords";
+            this.keywordsDataGridViewTextBoxColumn.HeaderText = "keywords";
+            this.keywordsDataGridViewTextBoxColumn.Name = "keywordsDataGridViewTextBoxColumn";
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "size";
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            // 
+            // formatDataGridViewTextBoxColumn
+            // 
+            this.formatDataGridViewTextBoxColumn.DataPropertyName = "format";
+            this.formatDataGridViewTextBoxColumn.HeaderText = "format";
+            this.formatDataGridViewTextBoxColumn.Name = "formatDataGridViewTextBoxColumn";
+            // 
+            // contentDataGridViewTextBoxColumn
+            // 
+            this.contentDataGridViewTextBoxColumn.DataPropertyName = "content";
+            this.contentDataGridViewTextBoxColumn.HeaderText = "content";
+            this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
+            // 
+            // idCatalogDataGridViewTextBoxColumn
+            // 
+            this.idCatalogDataGridViewTextBoxColumn.DataPropertyName = "IdCatalog";
+            this.idCatalogDataGridViewTextBoxColumn.HeaderText = "IdCatalog";
+            this.idCatalogDataGridViewTextBoxColumn.Name = "idCatalogDataGridViewTextBoxColumn";
+            // 
+            // tFileBindingSource
+            // 
+            this.tFileBindingSource.DataMember = "TFile";
+            this.tFileBindingSource.DataSource = this.searchBaseDataSetTFile;
+            // 
+            // searchBaseDataSetTFile
+            // 
+            this.searchBaseDataSetTFile.DataSetName = "SearchBaseDataSetTFile";
+            this.searchBaseDataSetTFile.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbFormat
             // 
@@ -605,101 +777,9 @@
             this.metroLabel5.TabIndex = 3;
             this.metroLabel5.Text = "Выберите таблицу для редактирования";
             // 
-            // txtSize
+            // tFileTableAdapter
             // 
-            this.txtSize.Location = new System.Drawing.Point(142, 101);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(100, 22);
-            this.txtSize.TabIndex = 12;
-            // 
-            // txtContent
-            // 
-            this.txtContent.Location = new System.Drawing.Point(142, 168);
-            this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(160, 54);
-            this.txtContent.TabIndex = 13;
-            this.txtContent.Text = "";
-            // 
-            // metroPanel3
-            // 
-            this.metroPanel3.Controls.Add(this.btnDelF);
-            this.metroPanel3.Controls.Add(this.btnViewF);
-            this.metroPanel3.Controls.Add(this.btnUpdF);
-            this.metroPanel3.Controls.Add(this.btnSaveF);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(0, 242);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(302, 122);
-            this.metroPanel3.TabIndex = 4;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // btnDelF
-            // 
-            this.btnDelF.BackColor = System.Drawing.Color.Teal;
-            this.btnDelF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelF.BackgroundImage")));
-            this.btnDelF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDelF.ForeColor = System.Drawing.Color.White;
-            this.btnDelF.Location = new System.Drawing.Point(149, 5);
-            this.btnDelF.Name = "btnDelF";
-            this.btnDelF.Size = new System.Drawing.Size(103, 30);
-            this.btnDelF.TabIndex = 8;
-            this.btnDelF.Text = "  Delete";
-            this.btnDelF.UseCustomBackColor = true;
-            this.btnDelF.UseCustomForeColor = true;
-            this.btnDelF.UseSelectable = true;
-            this.btnDelF.UseStyleColors = true;
-            // 
-            // btnViewF
-            // 
-            this.btnViewF.BackColor = System.Drawing.Color.Teal;
-            this.btnViewF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewF.BackgroundImage")));
-            this.btnViewF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnViewF.ForeColor = System.Drawing.Color.White;
-            this.btnViewF.Location = new System.Drawing.Point(15, 82);
-            this.btnViewF.Name = "btnViewF";
-            this.btnViewF.Size = new System.Drawing.Size(103, 30);
-            this.btnViewF.TabIndex = 7;
-            this.btnViewF.Text = " View";
-            this.btnViewF.UseCustomBackColor = true;
-            this.btnViewF.UseCustomForeColor = true;
-            this.btnViewF.UseSelectable = true;
-            this.btnViewF.UseStyleColors = true;
-            // 
-            // btnUpdF
-            // 
-            this.btnUpdF.BackColor = System.Drawing.Color.Teal;
-            this.btnUpdF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdF.BackgroundImage")));
-            this.btnUpdF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdF.ForeColor = System.Drawing.Color.White;
-            this.btnUpdF.Location = new System.Drawing.Point(15, 41);
-            this.btnUpdF.Name = "btnUpdF";
-            this.btnUpdF.Size = new System.Drawing.Size(103, 30);
-            this.btnUpdF.TabIndex = 6;
-            this.btnUpdF.Text = "  Update";
-            this.btnUpdF.UseCustomBackColor = true;
-            this.btnUpdF.UseCustomForeColor = true;
-            this.btnUpdF.UseSelectable = true;
-            this.btnUpdF.UseStyleColors = true;
-            // 
-            // btnSaveF
-            // 
-            this.btnSaveF.BackColor = System.Drawing.Color.Teal;
-            this.btnSaveF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveF.BackgroundImage")));
-            this.btnSaveF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSaveF.ForeColor = System.Drawing.Color.White;
-            this.btnSaveF.Location = new System.Drawing.Point(15, 5);
-            this.btnSaveF.Name = "btnSaveF";
-            this.btnSaveF.Size = new System.Drawing.Size(103, 30);
-            this.btnSaveF.TabIndex = 2;
-            this.btnSaveF.Text = " Insert";
-            this.btnSaveF.UseCustomBackColor = true;
-            this.btnSaveF.UseCustomForeColor = true;
-            this.btnSaveF.UseSelectable = true;
-            this.btnSaveF.UseStyleColors = true;
+            this.tFileTableAdapter.ClearBeforeFill = true;
             // 
             // MainAP
             // 
@@ -724,10 +804,12 @@
             this.metroPanel1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridFile)).EndInit();
+            this.metroPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FileGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSearchPatternBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTSearchPattern)).EndInit();
-            this.metroPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -763,13 +845,23 @@
         private MetroFramework.Controls.MetroComboBox cmbFormat;
         private MetroFramework.Controls.MetroTextBox txtKeywords;
         private MetroFramework.Controls.MetroTextBox txtFileName;
-        private MetroFramework.Controls.MetroGrid GridFile;
+        private MetroFramework.Controls.MetroGrid FileGrid;
         private System.Windows.Forms.TextBox txtSize;
         private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroButton btnDelF;
-        private MetroFramework.Controls.MetroButton btnViewF;
-        private MetroFramework.Controls.MetroButton btnUpdF;
-        private MetroFramework.Controls.MetroButton btnSaveF;
+        private MetroFramework.Controls.MetroButton btnDelFile;
+        private MetroFramework.Controls.MetroButton btnViewFile;
+        private MetroFramework.Controls.MetroButton btnUpdFile;
+        private MetroFramework.Controls.MetroButton btnSaveFile;
         private System.Windows.Forms.RichTextBox txtContent;
+        private SearchBaseDataSetTFile searchBaseDataSetTFile;
+        private System.Windows.Forms.BindingSource tFileBindingSource;
+        private SearchBaseDataSetTFileTableAdapters.TFileTableAdapter tFileTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn keywordsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn formatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCatalogDataGridViewTextBoxColumn;
     }
 }

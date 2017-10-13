@@ -29,6 +29,7 @@ namespace CRUD_v3
         private void MainAP_Load(object sender, EventArgs e)
         {
             ViewSP();
+            ViewFile();
         }
 
         private const string CONNECTION_STRING =
@@ -159,12 +160,12 @@ namespace CRUD_v3
             cmbAction.Text = "";
         }
 
-        private void SPGrid_MouseClick(object sender, MouseEventArgs e)
-        {
-            txtRegExp.Text = SPGrid.SelectedRows[0].Cells[1].Value.ToString();
-            cmbCompare.Text = SPGrid.SelectedRows[0].Cells[2].Value.ToString();
-            cmbAction.Text = SPGrid.SelectedRows[0].Cells[3].Value.ToString();
-        }
+        //private void SPGrid_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    txtRegExp.Text = SPGrid.SelectedRows[0].Cells[1].Value.ToString();
+        //    cmbCompare.Text = SPGrid.SelectedRows[0].Cells[2].Value.ToString();
+        //    cmbAction.Text = SPGrid.SelectedRows[0].Cells[3].Value.ToString();
+        //}
 
         private void btnInsertSP_Click(object sender, EventArgs e)
         {
@@ -227,6 +228,19 @@ namespace CRUD_v3
         //    cmbAction.Text = SPGrid.Rows[0].Cells["action"].Value.ToString();
         //}
 
+        //Заполнить текстбоксы/комбобоксы данными из dataGridView (не работает)
+        private void SPGrid_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (SPGrid.CurrentCell != null && SPGrid.CurrentCell.RowIndex >= 0)
+            {
+                txtRegExp.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["regularExpression"].Value.ToString();
+                cmbCompare.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["compareWith"].Value.ToString();
+                cmbAction.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["action"].Value.ToString();
+            }
+        }
+
+
+
 
         // --- CRUD for File ---
         //Размер только цифрами
@@ -238,8 +252,174 @@ namespace CRUD_v3
             }
         }
 
+        //Create
+        private void InsertFile(string name, string keywords, string size, string format, string content)
+        {
+            string sql = "INSERT INTO TFile(name, keywords, size, format, content) VALUES(@name, @keywords, @size, @format, @content)";
+            cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@keywords", keywords);
+            cmd.Parameters.AddWithValue("@size", size);
+            cmd.Parameters.AddWithValue("@format", format);
+            cmd.Parameters.AddWithValue("@content", content);
+            try
+            {
+                con.Open();
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    clearTxtsFile();
+                    MessageBox.Show("Запись добавлена");
+                }
+                con.Close();
+                ViewFile();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+        }
 
+        private void fillFileGrid(String id, string name, string keywords, string size, string format, string content, string IdCatalog)
+        {
+            FileGrid.Rows.Add(id, name, keywords, size, format, content, IdCatalog);
+        }
 
+        //  Read  
+        private void ViewFile()
+        {
+            //FileGrid.Rows.Clear();
+            string sql = "SELECT * FROM TFile";
+            cmd = new SqlCommand(sql, con);
+            try
+            {
+                con.Open();
+                adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                foreach (DataRow row in dt.Rows)
+                {
+                    fillFileGrid(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(),row[4].ToString(), row[5].ToString(), row[6].ToString());
+                }
+                con.Close();
+                dt.Rows.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+        }
+
+        //  Update
+        private void UpdateFile(int id, string name, string keywords, string size, string format, string content)
+        {
+            string sql = "UPDATE TFile SET name='" + name + "', keywords='" + keywords + "', size='" + size + "', format='" + format + "',content='" + content + "' WHERE ID=" + id + "";
+            cmd = new SqlCommand(sql, con);
+            try
+            {
+                con.Open();
+                adapter = new SqlDataAdapter(cmd);
+                adapter.UpdateCommand = con.CreateCommand();
+                adapter.UpdateCommand.CommandText = sql;
+                if (adapter.UpdateCommand.ExecuteNonQuery() > 0)
+                {
+                    clearTxtsFile();
+                    MessageBox.Show("Запись обновлена");
+                }
+                con.Close();
+                ViewFile();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+        }
+
+        //  Delete
+        private void DeleteFile(int id)
+        {
+            string sql = "DELETE FROM TFile WHERE ID=" + id + "";
+            cmd = new SqlCommand(sql, con);
+            try
+            {
+                con.Open();
+                MessageBox.Show(con.State.ToString());
+                adapter = new SqlDataAdapter(cmd);
+                adapter.DeleteCommand = con.CreateCommand();
+                adapter.DeleteCommand.CommandText = sql;
+                if (MessageBox.Show("Вы уверены?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        clearTxtsFile();
+                        MessageBox.Show("Запись удалена");
+                    }
+                }
+                con.Close();
+                ViewFile();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+        }
+
+        private void clearTxtsFile()
+        {
+            txtFileName.Text = "";
+            txtKeywords.Text = "";
+            txtSize.Text = "";
+            cmbFormat.Text = "";
+            txtContent.Text = "";
+        }
+
+        private void FileGrid_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtFileName.Text = FileGrid.SelectedRows[0].Cells[1].Value.ToString();
+            txtKeywords.Text = FileGrid.SelectedRows[0].Cells[2].Value.ToString();
+            txtSize.Text = FileGrid.SelectedRows[0].Cells[3].Value.ToString();
+            cmbFormat.Text = FileGrid.SelectedRows[0].Cells[4].Value.ToString();
+            txtContent.Text = FileGrid.SelectedRows[0].Cells[5].Value.ToString();
+        }
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+            if (txtFileName.Text == "" || txtKeywords.Text == "" || txtSize.Text == "" || cmbFormat.Text == "" || txtContent.Text == "")
+            {
+                MessageBox.Show("Поля не заполнены");
+            }
+            else
+            {
+                InsertFile(txtFileName.Text, txtKeywords.Text, txtSize.Text, cmbFormat.Text, txtContent.Text);
+            }
+        }
+
+        private void btnViewFile_Click(object sender, EventArgs e)
+        {
+            ViewFile();
+        }
+        private void btnUpdFile_Click(object sender, EventArgs e)
+        {
+            if (txtFileName.Text == "" || txtKeywords.Text == "" || txtSize.Text == "" || cmbFormat.Text == "" || txtContent.Text == "")
+            {
+                MessageBox.Show("Поля не заполнены");
+            }
+            else
+            {
+                String selected = FileGrid.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt32(selected);
+                UpdateFile(id, txtFileName.Text, txtKeywords.Text, txtSize.Text, cmbFormat.Text, txtContent.Text);
+            }
+
+        }
+        private void btnDelFile_Click(object sender, EventArgs e)
+        {
+            String selected = FileGrid.SelectedRows[0].Cells[0].Value.ToString();
+            int id = Convert.ToInt32(selected);
+            DeleteFile(id);
+        }
 
     }
 }

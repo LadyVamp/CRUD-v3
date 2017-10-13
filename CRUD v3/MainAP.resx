@@ -160,7 +160,7 @@
         40rLbm5KrhYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnDelF.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDelFile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAP9JREFUSEvt
         VdsNgkAQpARLsAQ+FTDyaXgklGAHWgIl2IGWYAfSgV2A+kMJukMGc0cMB2j8ukkmt7d3swNc2HMs/oIy
@@ -170,7 +170,7 @@
         a9TbWJjhOC8pufHPuPpKhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnViewF.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnViewFile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAYdJREFUSEvt
         VMtRw0AMdQmUkAvg3OiAdAAlUEI68IYGoANSAjd2fXE6SDoIHSQdgJ4+u8ImjCfMMBz8ZpSspSft7pPs
@@ -182,7 +182,7 @@
         nDM+Qd8BJ8UIU1EeBqzPOv2ECX+EqvoEXWCSGVQBJ4YAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnUpdF.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUpdFile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAS5JREFUSEvt
         VMsRgjAUtARL4OIM3CzBzogVaAfSAd4kXqQDS7AE6QDfJptREIgEx4vszA483mffC0kWM76KWOkyVsUl
@@ -193,7 +193,7 @@
         pnZLAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnSaveF.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSaveFile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAALtJREFUSEvt
         lMENwjAMRbMMUntjBEZhFG8CW9D20ozAJnQDsJsPMiVJ05QDRXnSV2yw/W41he1RU3vPSUXNCSfScEvt
@@ -202,6 +202,12 @@
         40rLbm5KrhYAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="tFileBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1024, 17</value>
+  </metadata>
+  <metadata name="searchBaseDataSetTFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>808, 17</value>
+  </metadata>
   <metadata name="tSearchPatternBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>305, 17</value>
   </metadata>
@@ -210,6 +216,9 @@
   </metadata>
   <metadata name="tSearchPatternTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>560, 17</value>
+  </metadata>
+  <metadata name="tFileTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1207, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>26</value>

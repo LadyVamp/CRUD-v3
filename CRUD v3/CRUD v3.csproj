@@ -78,6 +78,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchBaseDataSetTFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchBaseDataSetTFile.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SearchBaseDataSetTFileWithoutID.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +121,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SearchBaseDataSetTFile.xsc">
+      <DependentUpon>SearchBaseDataSetTFile.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBaseDataSetTFile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchBaseDataSetTFile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SearchBaseDataSetTFile.xss">
+      <DependentUpon>SearchBaseDataSetTFile.xsd</DependentUpon>
+    </None>
     <None Include="SearchBaseDataSetTFileWithoutID.xsc">
       <DependentUpon>SearchBaseDataSetTFileWithoutID.xsd</DependentUpon>
     </None>
