@@ -29,6 +29,26 @@ namespace CRUD_v3
         private void MainAP_Load(object sender, EventArgs e)
         {
             ViewSP();
+
+            //заполнить dataGridView при запуске формы
+            DataSet ds = new DataSet();
+            SqlConnection dataBaseConnection = new SqlConnection(CONNECTION_STRING);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM TFile", dataBaseConnection);
+            dataAdapter.Fill(ds, "TFile");
+            FileGrid.DataSource = ds.Tables["TFile"];
+            FileGrid.Columns[0].HeaderText = "ID";
+            FileGrid.Columns[1].HeaderText = "Название";
+            FileGrid.Columns[2].HeaderText = "Ключевые слова";
+            FileGrid.Columns[3].HeaderText = "Размер, КБ";
+            FileGrid.Columns[4].HeaderText = "Формат";
+            FileGrid.Columns[5].HeaderText = "Содержание";
+            FileGrid.Columns[6].HeaderText = "IdCatalog";
+            FileGrid.Columns[0].Width = 30;
+            FileGrid.Columns[1].Width = 80;
+            FileGrid.Columns[2].Width = 80;
+            FileGrid.Columns[3].Width = 60;
+            FileGrid.Columns[4].Width = 60;
+            FileGrid.Columns[5].Width = 100;
         }
 
         private const string CONNECTION_STRING =

@@ -115,7 +115,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(30, 96);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(1077, 455);
+            this.metroTabControl1.Size = new System.Drawing.Size(956, 455);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 2;
             this.metroTabControl1.Tag = "";
@@ -136,9 +136,9 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1069, 371);
+            this.metroTabPage1.Size = new System.Drawing.Size(948, 413);
             this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Шаблоны поиска";
+            this.metroTabPage1.Text = "Шаблоны поиска (TSearchPattern)";
             this.metroTabPage1.UseCustomBackColor = true;
             this.metroTabPage1.UseStyleColors = true;
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -153,10 +153,10 @@
             this.SPGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.SPGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SPGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -165,7 +165,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.SPGrid.DefaultCellStyle = dataGridViewCellStyle2;
@@ -173,22 +173,22 @@
             this.SPGrid.EnableHeadersVisualStyles = false;
             this.SPGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SPGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SPGrid.Location = new System.Drawing.Point(0, 148);
+            this.SPGrid.Location = new System.Drawing.Point(373, 12);
             this.SPGrid.Name = "SPGrid";
             this.SPGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SPGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.SPGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.SPGrid.RowTemplate.Height = 24;
             this.SPGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SPGrid.Size = new System.Drawing.Size(662, 216);
-            this.SPGrid.Style = MetroFramework.MetroColorStyle.Blue;
+            this.SPGrid.Size = new System.Drawing.Size(579, 216);
+            this.SPGrid.Style = MetroFramework.MetroColorStyle.Orange;
             this.SPGrid.TabIndex = 4;
             // 
             // metroPanel2
@@ -200,7 +200,7 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(401, 12);
+            this.metroPanel2.Location = new System.Drawing.Point(3, 163);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(261, 122);
             this.metroPanel2.TabIndex = 3;
@@ -289,7 +289,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 12);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(385, 122);
+            this.metroPanel1.Size = new System.Drawing.Size(367, 122);
             this.metroPanel1.TabIndex = 2;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -302,7 +302,7 @@
             this.cmbAction.Items.AddRange(new object[] {
             "Включить",
             "Исключить"});
-            this.cmbAction.Location = new System.Drawing.Point(209, 82);
+            this.cmbAction.Location = new System.Drawing.Point(194, 82);
             this.cmbAction.Name = "cmbAction";
             this.cmbAction.Size = new System.Drawing.Size(160, 30);
             this.cmbAction.TabIndex = 8;
@@ -315,7 +315,7 @@
             this.cmbCompare.Items.AddRange(new object[] {
             "Имя файла",
             "Абсолютный путь"});
-            this.cmbCompare.Location = new System.Drawing.Point(209, 42);
+            this.cmbCompare.Location = new System.Drawing.Point(194, 46);
             this.cmbCompare.Name = "cmbCompare";
             this.cmbCompare.Size = new System.Drawing.Size(160, 30);
             this.cmbCompare.TabIndex = 7;
@@ -337,7 +337,7 @@
             this.txtRegExp.CustomButton.Visible = false;
             this.txtRegExp.DisplayIcon = true;
             this.txtRegExp.Lines = new string[0];
-            this.txtRegExp.Location = new System.Drawing.Point(209, 9);
+            this.txtRegExp.Location = new System.Drawing.Point(194, 13);
             this.txtRegExp.Margin = new System.Windows.Forms.Padding(5);
             this.txtRegExp.MaxLength = 32767;
             this.txtRegExp.Multiline = true;
@@ -412,7 +412,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(30, 60);
+            this.metroLabel5.Location = new System.Drawing.Point(30, 66);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(265, 20);
             this.metroLabel5.TabIndex = 3;
@@ -438,14 +438,15 @@
             this.metroTabPage2.Controls.Add(this.txtFileName);
             this.metroTabPage2.Controls.Add(this.metroLabel9);
             this.metroTabPage2.Controls.Add(this.metroLabel10);
+            this.metroTabPage2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1069, 413);
+            this.metroTabPage2.Size = new System.Drawing.Size(948, 413);
             this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "Файлы";
+            this.metroTabPage2.Text = "Файлы (TFile)";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
@@ -459,10 +460,10 @@
             this.FileGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.FileGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.FileGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
@@ -480,7 +481,7 @@
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.FileGrid.DefaultCellStyle = dataGridViewCellStyle5;
@@ -491,18 +492,18 @@
             this.FileGrid.Name = "FileGrid";
             this.FileGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.FileGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.FileGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.FileGrid.RowTemplate.Height = 24;
             this.FileGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.FileGrid.Size = new System.Drawing.Size(731, 338);
-            this.FileGrid.Style = MetroFramework.MetroColorStyle.Teal;
+            this.FileGrid.Size = new System.Drawing.Size(605, 338);
+            this.FileGrid.Style = MetroFramework.MetroColorStyle.Blue;
             this.FileGrid.TabIndex = 25;
             // 
             // cmbCatalog
@@ -695,10 +696,10 @@
             // 
             // btnDelFile
             // 
-            this.btnDelFile.BackColor = System.Drawing.Color.Teal;
+            this.btnDelFile.BackColor = System.Drawing.Color.Orange;
             this.btnDelFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelFile.BackgroundImage")));
             this.btnDelFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDelFile.ForeColor = System.Drawing.Color.White;
+            this.btnDelFile.ForeColor = System.Drawing.Color.Black;
             this.btnDelFile.Location = new System.Drawing.Point(149, 5);
             this.btnDelFile.Name = "btnDelFile";
             this.btnDelFile.Size = new System.Drawing.Size(103, 30);
@@ -711,10 +712,10 @@
             // 
             // btnViewFile
             // 
-            this.btnViewFile.BackColor = System.Drawing.Color.Teal;
+            this.btnViewFile.BackColor = System.Drawing.Color.Orange;
             this.btnViewFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewFile.BackgroundImage")));
             this.btnViewFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnViewFile.ForeColor = System.Drawing.Color.White;
+            this.btnViewFile.ForeColor = System.Drawing.Color.Black;
             this.btnViewFile.Location = new System.Drawing.Point(15, 82);
             this.btnViewFile.Name = "btnViewFile";
             this.btnViewFile.Size = new System.Drawing.Size(103, 30);
@@ -727,10 +728,10 @@
             // 
             // btnUpdFile
             // 
-            this.btnUpdFile.BackColor = System.Drawing.Color.Teal;
+            this.btnUpdFile.BackColor = System.Drawing.Color.Orange;
             this.btnUpdFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdFile.BackgroundImage")));
             this.btnUpdFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdFile.ForeColor = System.Drawing.Color.White;
+            this.btnUpdFile.ForeColor = System.Drawing.Color.Black;
             this.btnUpdFile.Location = new System.Drawing.Point(15, 41);
             this.btnUpdFile.Name = "btnUpdFile";
             this.btnUpdFile.Size = new System.Drawing.Size(103, 30);
@@ -743,10 +744,10 @@
             // 
             // btnSaveFile
             // 
-            this.btnSaveFile.BackColor = System.Drawing.Color.Teal;
+            this.btnSaveFile.BackColor = System.Drawing.Color.Orange;
             this.btnSaveFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveFile.BackgroundImage")));
             this.btnSaveFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSaveFile.ForeColor = System.Drawing.Color.White;
+            this.btnSaveFile.ForeColor = System.Drawing.Color.Black;
             this.btnSaveFile.Location = new System.Drawing.Point(15, 5);
             this.btnSaveFile.Name = "btnSaveFile";
             this.btnSaveFile.Size = new System.Drawing.Size(103, 30);
@@ -805,7 +806,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(1115, 561);
+            this.ClientSize = new System.Drawing.Size(1007, 561);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.metroLabel1);
