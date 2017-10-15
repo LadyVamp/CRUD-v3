@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchBaseDataSetTFile.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchBaseDataSetTFileForFileAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchBaseDataSetTFileForFileAP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SearchBaseDataSetTFileWithoutID.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -140,6 +145,17 @@
     </None>
     <None Include="SearchBaseDataSetTFile.xss">
       <DependentUpon>SearchBaseDataSetTFile.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBaseDataSetTFileForFileAP.xsc">
+      <DependentUpon>SearchBaseDataSetTFileForFileAP.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBaseDataSetTFileForFileAP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchBaseDataSetTFileForFileAP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SearchBaseDataSetTFileForFileAP.xss">
+      <DependentUpon>SearchBaseDataSetTFileForFileAP.xsd</DependentUpon>
     </None>
     <None Include="SearchBaseDataSetTFileWithoutID.xsc">
       <DependentUpon>SearchBaseDataSetTFileWithoutID.xsd</DependentUpon>

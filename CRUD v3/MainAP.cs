@@ -75,7 +75,7 @@ namespace CRUD_v3
         private void ViewSP()
         {
             SPGrid.Rows.Clear();
-            string sql = "SELECT * FROM TSearchPattern ";
+            string sql = "SELECT * FROM TSearchPattern";
             cmd = new SqlCommand(sql, con);
             try
             {
@@ -202,10 +202,6 @@ namespace CRUD_v3
             int id = Convert.ToInt32(selected);
             DeleteSP(id);
         }
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            SPGrid.Rows.Clear();
-        }
 
         // --- end CRUD for SearchPattern ---
 
@@ -228,15 +224,28 @@ namespace CRUD_v3
         //}
 
         //Заполнить текстбоксы/комбобоксы данными из dataGridView (не работает)
-        private void SPGrid_CurrentCellChanged(object sender, EventArgs e)
-        {
-            if (SPGrid.CurrentCell != null && SPGrid.CurrentCell.RowIndex >= 0)
-            {
-                txtRegExp.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["regularExpression"].Value.ToString();
-                cmbCompare.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["compareWith"].Value.ToString();
-                cmbAction.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["action"].Value.ToString();
-            }
-        }
+        //private void SPGrid_CurrentCellChanged(object sender, EventArgs e)
+        //{
+        //    if (SPGrid.CurrentCell != null && SPGrid.CurrentCell.RowIndex >= 0)
+        //    {
+        //        txtRegExp.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["regularExpression"].Value.ToString();
+        //        cmbCompare.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["compareWith"].Value.ToString();
+        //        cmbAction.Text = SPGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["action"].Value.ToString();
+        //    }
+        //}
+
+            //так тоже не работает
+        //    private void FileGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    // get datagridview selected row 
+        //   int selectedRow = e.RowIndex;
+        //    DataGridViewRow row = SPGrid.Rows[selectedRow];
+
+        //    // display datagridview selected row data into textboxes 
+        //    txtRegExp.Text = row.Cells[0].Value.ToString();
+        //    cmbCompare.Text = row.Cells[1].Value.ToString();
+        //    cmbAction.Text = row.Cells[2].Value.ToString();
+        //}
 
         private void btnFileAP_Click(object sender, EventArgs e)
         {
