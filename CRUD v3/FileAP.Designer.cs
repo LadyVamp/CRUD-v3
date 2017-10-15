@@ -37,9 +37,7 @@
             this.mtEdit = new MetroFramework.Controls.MetroTile();
             this.mtDelete = new MetroFramework.Controls.MetroTile();
             this.FileGrid = new System.Windows.Forms.DataGridView();
-            this.tFileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mtSave = new MetroFramework.Controls.MetroTile();
-            this.tCatalogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.keywordsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,11 +45,13 @@
             this.formatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCatalogDataGridViewCombobox = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tCatalogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tFileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCatalogBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // searchBaseDataSetTFile
@@ -153,12 +153,8 @@
             this.FileGrid.Location = new System.Drawing.Point(23, 147);
             this.FileGrid.Name = "FileGrid";
             this.FileGrid.RowTemplate.Height = 24;
-            this.FileGrid.Size = new System.Drawing.Size(859, 331);
+            this.FileGrid.Size = new System.Drawing.Size(748, 331);
             this.FileGrid.TabIndex = 5;
-            // 
-            // tFileBindingSource
-            // 
-            this.tFileBindingSource.DataSource = typeof(CRUD_v3.TFile);
             // 
             // mtSave
             // 
@@ -177,10 +173,6 @@
             this.mtSave.UseStyleColors = true;
             this.mtSave.UseTileImage = true;
             this.mtSave.Click += new System.EventHandler(this.mtSave_Click);
-            // 
-            // tCatalogBindingSource
-            // 
-            this.tCatalogBindingSource.DataSource = typeof(CRUD_v3.TCatalog);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -229,6 +221,14 @@
             this.idCatalogDataGridViewCombobox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idCatalogDataGridViewCombobox.ValueMember = "Id";
             // 
+            // tCatalogBindingSource
+            // 
+            this.tCatalogBindingSource.DataSource = typeof(CRUD_v3.TCatalog);
+            // 
+            // tFileBindingSource
+            // 
+            this.tFileBindingSource.DataSource = typeof(CRUD_v3.TFile);
+            // 
             // FileAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,8 +248,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCatalogBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tFileBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

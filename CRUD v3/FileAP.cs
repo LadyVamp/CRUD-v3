@@ -13,13 +13,16 @@ namespace CRUD_v3
 {
     public partial class FileAP : MetroFramework.Forms.MetroForm
     {
-//        private const string CONNECTION_STRING =
-//"Data Source=DESKTOP-O9H5H8N;Initial Catalog=SearchBase;Integrated Security=True";
+        //        private const string CONNECTION_STRING =
+        //"Data Source=DESKTOP-O9H5H8N;Initial Catalog=SearchBase;Integrated Security=True";
 
-//        SqlConnection con = new SqlConnection(CONNECTION_STRING);
-//        SqlCommand cmd;
-//        SqlDataAdapter adapter;
-//        DataTable dt = new DataTable();
+        //        SqlConnection con = new SqlConnection(CONNECTION_STRING);
+        //        SqlCommand cmd;
+        //        SqlDataAdapter adapter;
+        //        DataTable dt = new DataTable();
+
+        // гайд  https://www.youtube.com/watch?v=mdFgbdM8PYk
+        //не работает в итоге, при нажатии на refresh "ссылка на объект не указывает на экземпляр объекта"
 
         public FileAP()
         {
@@ -51,10 +54,22 @@ namespace CRUD_v3
         
         private void mtRefresh_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            tFileBindingSource.DataSource = db.TFile.ToList();
-            tCatalogBindingSource.DataSource = db.TCatalog.ToList();
-            Cursor.Current = Cursors.Default;
+
+
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    tFileBindingSource.DataSource = db.TFile.ToList();
+                    tCatalogBindingSource.DataSource = db.TCatalog.ToList();
+                    Cursor.Current = Cursors.Default;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                }
+            
+
         }
 
         SearchBaseEntities db;
