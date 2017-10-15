@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -50,8 +51,12 @@
             this.btnSaveFile = new MetroFramework.Controls.MetroButton();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.cmbCatalog = new MetroFramework.Controls.MetroComboBox();
+            this.searchBaseDataSetTFile = new CRUD_v3.SearchBaseDataSetTFile();
+            this.searchBaseDataSetTFileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.FileGrid)).BeginInit();
             this.metroPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtContent
@@ -259,7 +264,7 @@
             this.metroPanel3.HorizontalScrollbarSize = 10;
             this.metroPanel3.Location = new System.Drawing.Point(23, 356);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(302, 122);
+            this.metroPanel3.Size = new System.Drawing.Size(273, 122);
             this.metroPanel3.TabIndex = 25;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
@@ -351,6 +356,16 @@
             this.cmbCatalog.TabIndex = 27;
             this.cmbCatalog.UseSelectable = true;
             // 
+            // searchBaseDataSetTFile
+            // 
+            this.searchBaseDataSetTFile.DataSetName = "SearchBaseDataSetTFile";
+            this.searchBaseDataSetTFile.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // searchBaseDataSetTFileBindingSource
+            // 
+            this.searchBaseDataSetTFileBindingSource.DataSource = this.searchBaseDataSetTFile;
+            this.searchBaseDataSetTFileBindingSource.Position = 0;
+            // 
             // FileAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,6 +392,8 @@
             this.Text = "FileAP";
             ((System.ComponentModel.ISupportInitialize)(this.FileGrid)).EndInit();
             this.metroPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBaseDataSetTFileBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +419,7 @@
         private MetroFramework.Controls.MetroButton btnSaveFile;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroComboBox cmbCatalog;
+        private System.Windows.Forms.BindingSource searchBaseDataSetTFileBindingSource;
+        private SearchBaseDataSetTFile searchBaseDataSetTFile;
     }
 }

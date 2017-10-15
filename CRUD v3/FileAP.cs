@@ -13,8 +13,10 @@ namespace CRUD_v3
 {
     public partial class FileAP : MetroFramework.Forms.MetroForm
     {
-        static string conString = "Server=localhost;Database=peopledb;Uid=root;Pwd=;";
-        SqlConnection con = new SqlConnection(conString);
+        private const string CONNECTION_STRING =
+"Data Source=DESKTOP-O9H5H8N;Initial Catalog=SearchBase;Integrated Security=True";
+
+        SqlConnection con = new SqlConnection(CONNECTION_STRING);
         SqlCommand cmd;
         SqlDataAdapter adapter;
         DataTable dt = new DataTable();
@@ -23,7 +25,7 @@ namespace CRUD_v3
         {
             InitializeComponent();
             FileGrid.ColumnCount = 7;
-            FileGrid.Columns[0].Name = "ID";
+            FileGrid.Columns[0].Name = "id";
             FileGrid.Columns[1].Name = "name";
             FileGrid.Columns[2].Name = "keywords";
             FileGrid.Columns[3].Name = "size";
@@ -34,7 +36,12 @@ namespace CRUD_v3
             FileGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FileGrid.MultiSelect = false;
         }
-        
+
+        private void FileAP_Load(object sender, EventArgs e)
+        {
+            retrieve();
+        }
+
         //Create
         private void InsertFile(string name, string keywords, string size, string format, string content, string IdCatalog)
         {
@@ -64,7 +71,7 @@ namespace CRUD_v3
             }
         }
 
-        private void populate(String id, string name, string keywords, string size, string format, string content, string IdCatalog)
+        private void populate(String id, String name, string keywords, string size, string format, string content, string IdCatalog)
         {
             FileGrid.Rows.Add(id, name, keywords, size, format, content, IdCatalog);
         }
@@ -166,9 +173,19 @@ namespace CRUD_v3
         //    txtContent.Text = FileGrid.SelectedRows[0].Cells[5].Value.ToString();
         //    cmbCatalog.Text = FileGrid.SelectedRows[0].Cells[6].Value.ToString();
         //}
+
+
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
-            InsertFile(txtFileName.Text, txtKeywords.Text, txtSize.Text, cmbFormat.Text, txtContent.Text, cmbCatalog.Text);
+            if (txtFileName.Text == "" || txtKeywords.Text == "" || txtSize.Text == "" || cmbFormat.Text == "" || txtContent.Text == "" || cmbCatalog.Text == "")
+            {
+                MessageBox.Show("Поля не заполнены");
+            }
+            else
+            {
+                InsertFile(txtFileName.Text, txtKeywords.Text, txtSize.Text, cmbFormat.Text, txtContent.Text, cmbCatalog.Text);
+            }
+
         }
         private void btnViewFile_Click(object sender, EventArgs e)
         {
@@ -176,9 +193,18 @@ namespace CRUD_v3
         }
         private void btnUpdFile_Click(object sender, EventArgs e)
         {
-            String selected = FileGrid.SelectedRows[0].Cells[0].Value.ToString();
-            int id = Convert.ToInt32(selected);
-            UpdateFile(id, txtFileName.Text, txtKeywords.Text, txtSize.Text, cmbFormat.Text, txtContent.Text, cmbCatalog.Text);
+            if (txtFileName.Text == "" || txtKeywords.Text == "" || txtSize.Text == "" || cmbFormat.Text == "" || txtContent.Text == "" || cmbCatalog.Text == "")
+            {
+                MessageBox.Show("Поля не заполнены");
+            }
+            else
+            {
+                String selected = FileGrid.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt32(selected);
+                UpdateFile(id, txtFileName.Text, txtKeywords.Text, txtSize.Text, cmbFormat.Text, txtContent.Text, cmbCatalog.Text);
+            }
+
+
         }
         private void btnDelFile_Click(object sender, EventArgs e)
         {
@@ -186,12 +212,6 @@ namespace CRUD_v3
             int id = Convert.ToInt32(selected);
             DeleteFile(id);
         }
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            FileGrid.Rows.Clear();
-        }
-
-        
 
     }
 }
