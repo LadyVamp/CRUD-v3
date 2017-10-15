@@ -4,7 +4,6 @@ c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\C
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\MetroFramework.Design.dll
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\MetroFramework.dll
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\MetroFramework.Fonts.dll
-c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD v3.csprojResolveAssemblyReference.cache
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.Properties.Resources.resources
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD v3.csproj.GenerateResource.Cache
 c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD v3.exe
@@ -12,4 +11,3 @@ c:\users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\C
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.MainForm.resources
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.Login.resources
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.MainAP.resources
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.FileAP.resources
