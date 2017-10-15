@@ -223,12 +223,9 @@ namespace CRUD_v3
             DeleteSP(id);
         }
 
-        // --- end CRUD for SearchPattern ---
+        // --- end CRUD for TSearchPattern ---
 
-        //TODO: CRUD for File
-
-
-
+        
         //private void SPGrid_SelectionChanged(object sender, EventArgs e)
         //{
         //    SPGrid.Rows[0].Cells["regularExpression"].Value = txtRegExp.Text;
@@ -441,5 +438,41 @@ namespace CRUD_v3
             DeleteFile(id);
         }
 
+       
+        ////Заполнить текстбоксы/комбобоксы данными из dataGridView(не работает)
+        //private void FileGrid_CurrentCellChanged(object sender, EventArgs e)
+        //{
+        //    if (FileGrid.CurrentCell != null && FileGrid.CurrentCell.RowIndex >= 0)
+        //    {
+        //        txtFileName.Text = FileGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["name"].Value.ToString();
+        //        txtKeywords.Text = FileGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["keywords"].Value.ToString();
+        //        txtFileName.Text = FileGrid.Rows[SPGrid.CurrentCell.RowIndex].Cells["size"].Value.ToString();
+        //        cmbFormat.Text = FileGrid.Rows[FileGrid.CurrentCell.RowIndex].Cells["format"].Value.ToString();
+        //        txtContent.Text = FileGrid.Rows[FileGrid.CurrentCell.RowIndex].Cells["content"].Value.ToString();
+        //        cmbCatalog.Text = FileGrid.Rows[FileGrid.CurrentCell.RowIndex].Cells["IdCatalog"].Value.ToString();
+        //    }
+        //}
+
+        ////так тоже не работает
+        //private void FileGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    // get datagridview selected row 
+        //    int selectedRow = e.RowIndex;
+        //    DataGridViewRow row = FileGrid.Rows[selectedRow];
+
+        //    // display datagridview selected row data into textboxes 
+        //    txtFileName.Text = row.Cells[0].Value.ToString();
+        //    txtKeywords.Text = row.Cells[1].Value.ToString();
+        //    txtFileName.Text = row.Cells[2].Value.ToString();
+        //    cmbFormat.Text = row.Cells[3].Value.ToString();
+        //    txtContent.Text = row.Cells[4].Value.ToString();
+        //    cmbCatalog.Text = row.Cells[5].Value.ToString();
+        //}
+
+
+
+        //TODO: 
+        // 1) плиточные MetroTile вместо button 
+        // 2) починить функционал кнопок MainAP -> TFile в гриде
     }
 }
