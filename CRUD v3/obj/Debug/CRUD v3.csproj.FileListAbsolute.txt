@@ -13,9 +13,3 @@ C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\C
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.Login.resources
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.MainAP.resources
 C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.FileAP.resources
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\obj\Debug\CRUD_v3.AddEditFile.resources
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\EntityFramework.dll
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\EntityFramework.xml
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\front\documents\visual studio 2015\Projects\CRUD v3\CRUD v3\bin\Debug\ru\EntityFramework.resources.dll
