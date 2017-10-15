@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище SearchBaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TCatalog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Access" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TFile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="keywords" Type="nvarchar" MaxLength="50" />
+          <Property Name="size" Type="float" />
+          <Property Name="format" Type="nvarchar" MaxLength="50" />
+          <Property Name="content" Type="nvarchar(max)" />
+          <Property Name="IdCatalog" Type="int" />
+        </EntityType>
+        <EntityType Name="TSearchPattern">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegularExpression" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompareWith" Type="nvarchar" MaxLength="50" />
+          <Property Name="Action" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_TFile_ToTCatalog">
+          <End Role="TCatalog" Type="Self.TCatalog" Multiplicity="0..1" />
+          <End Role="TFile" Type="Self.TFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCatalog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TFile">
+              <PropertyRef Name="IdCatalog" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище SearchBaseModelContainer">
+          <EntitySet Name="TCatalog" EntityType="Self.TCatalog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TFile" EntityType="Self.TFile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TSearchPattern" EntityType="Self.TSearchPattern" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TUser" EntityType="Self.TUser" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TFile_ToTCatalog" Association="Self.FK_TFile_ToTCatalog">
+            <End Role="TCatalog" EntitySet="TCatalog" />
+            <End Role="TFile" EntitySet="TFile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SearchBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TCatalog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Access" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TFile" Relationship="Self.FK_TFile_ToTCatalog" FromRole="TCatalog" ToRole="TFile" />
+        </EntityType>
+        <EntityType Name="TFile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="keywords" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="size" Type="Double" />
+          <Property Name="format" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IdCatalog" Type="Int32" />
+          <NavigationProperty Name="TCatalog" Relationship="Self.FK_TFile_ToTCatalog" FromRole="TFile" ToRole="TCatalog" />
+        </EntityType>
+        <EntityType Name="TSearchPattern">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegularExpression" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompareWith" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_TFile_ToTCatalog">
+          <End Role="TCatalog" Type="Self.TCatalog" Multiplicity="0..1" />
+          <End Role="TFile" Type="Self.TFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCatalog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TFile">
+              <PropertyRef Name="IdCatalog" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SearchBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TCatalog" EntityType="Self.TCatalog" />
+          <EntitySet Name="TFile" EntityType="Self.TFile" />
+          <EntitySet Name="TSearchPattern" EntityType="Self.TSearchPattern" />
+          <EntitySet Name="TUser" EntityType="Self.TUser" />
+          <AssociationSet Name="FK_TFile_ToTCatalog" Association="Self.FK_TFile_ToTCatalog">
+            <End Role="TCatalog" EntitySet="TCatalog" />
+            <End Role="TFile" EntitySet="TFile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище SearchBaseModelContainer" CdmEntityContainer="SearchBaseEntities">
+          <EntitySetMapping Name="TCatalog">
+            <EntityTypeMapping TypeName="SearchBaseModel.TCatalog">
+              <MappingFragment StoreEntitySet="TCatalog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Access" ColumnName="Access" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TFile">
+            <EntityTypeMapping TypeName="SearchBaseModel.TFile">
+              <MappingFragment StoreEntitySet="TFile">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="keywords" ColumnName="keywords" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="format" ColumnName="format" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="IdCatalog" ColumnName="IdCatalog" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TSearchPattern">
+            <EntityTypeMapping TypeName="SearchBaseModel.TSearchPattern">
+              <MappingFragment StoreEntitySet="TSearchPattern">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegularExpression" ColumnName="RegularExpression" />
+                <ScalarProperty Name="CompareWith" ColumnName="CompareWith" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TUser">
+            <EntityTypeMapping TypeName="SearchBaseModel.TUser">
+              <MappingFragment StoreEntitySet="TUser">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

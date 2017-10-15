@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SearchBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TCatalog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Access" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TFile" Relationship="Self.FK_TFile_ToTCatalog" FromRole="TCatalog" ToRole="TFile" />
+  </EntityType>
+  <EntityType Name="TFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="keywords" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="size" Type="Double" />
+    <Property Name="format" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdCatalog" Type="Int32" />
+    <NavigationProperty Name="TCatalog" Relationship="Self.FK_TFile_ToTCatalog" FromRole="TFile" ToRole="TCatalog" />
+  </EntityType>
+  <EntityType Name="TSearchPattern">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegularExpression" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompareWith" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_TFile_ToTCatalog">
+    <End Role="TCatalog" Type="Self.TCatalog" Multiplicity="0..1" />
+    <End Role="TFile" Type="Self.TFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCatalog">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TFile">
+        <PropertyRef Name="IdCatalog" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SearchBaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TCatalog" EntityType="Self.TCatalog" />
+    <EntitySet Name="TFile" EntityType="Self.TFile" />
+    <EntitySet Name="TSearchPattern" EntityType="Self.TSearchPattern" />
+    <EntitySet Name="TUser" EntityType="Self.TUser" />
+    <AssociationSet Name="FK_TFile_ToTCatalog" Association="Self.FK_TFile_ToTCatalog">
+      <End Role="TCatalog" EntitySet="TCatalog" />
+      <End Role="TFile" EntitySet="TFile" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
