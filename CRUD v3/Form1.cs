@@ -73,5 +73,25 @@ namespace CRUD_v3
             Login f = new Login();
             f.Show();
         }
+
+
+
+        private void btnSizeFilter_Click(object sender, EventArgs e)
+        {
+            tFileBindingSource.Filter = null;
+            //this.tFileBindingSource.Filter = "(size > 'txtMinSize.Text' and size< 'txtMaxSize.Text')";
+            txtMinSize.Text = null;
+            txtMaxSize.Text = null;
+
+            this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
+            this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
+
+            //this.tFileBindingSource.Filter = "(size > 0 and size< 20)";
+
+
+        }
+
+
+
     }
     }
