@@ -22,6 +22,11 @@ namespace CRUD_v3
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "searchBaseDataSetTFileWithoutID.TFile". При необходимости она может быть перемещена или удалена.
             this.tFileTableAdapter.Fill(this.searchBaseDataSetTFileWithoutID.TFile);
+            metroGrid1.Columns[0].Width = 120;
+            metroGrid1.Columns[1].Width = 120;
+            metroGrid1.Columns[2].Width = 50;
+            metroGrid1.Columns[3].Width = 50;
+            metroGrid1.Columns[4].Width = 150;
         }
 
         //  Поиск по названию
@@ -119,6 +124,8 @@ namespace CRUD_v3
                 MessageBox.Show(ex.Message);
             }
         }
+
+        //TODO: сделать, чтобы фильтр по размеру учитывал фильтрацию по формату
 
 
 
