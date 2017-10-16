@@ -80,13 +80,43 @@ namespace CRUD_v3
         {
             tFileBindingSource.Filter = null;
             //this.tFileBindingSource.Filter = "(size > 'txtMinSize.Text' and size< 'txtMaxSize.Text')";
-            txtMinSize.Text = null;
-            txtMaxSize.Text = null;
+            //txtMinSize.Text = null;
+            //txtMaxSize.Text = null;
 
-            this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
-            this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
+            //this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
+            //this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
 
             //this.tFileBindingSource.Filter = "(size > 0 and size< 20)";
+
+            try
+            {
+               
+
+                if (txtMinSize.Text != "" && txtMinSize.Text != "") //оба заполнены
+                {
+                    this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
+                    this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
+                }
+                else if (txtMinSize.Text == "" && txtMinSize.Text == "") //оба пустые 
+                {
+                    MessageBox.Show("Поля min и max размер не заполнены");
+                }
+                else if (txtMinSize.Text != "" && txtMaxSize.Text == "") //заполнен только min
+                {
+                    this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
+                }
+                else if (txtMaxSize.Text != "" && txtMinSize.Text == "") //заполнен только max
+                {
+                    this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Минимальный и максимальный размер не заполнены!!!!!!!!!!!!");
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
