@@ -74,51 +74,50 @@ namespace CRUD_v3
             f.Show();
         }
 
+        //Вводить в textbox только цифры
+        private void txtMinSize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+        private void txtMaxSize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+                e.Handled = true;
+        }
 
-
+        //Фильтр по размеру файла
         private void btnSizeFilter_Click(object sender, EventArgs e)
         {
             tFileBindingSource.Filter = null;
-            //this.tFileBindingSource.Filter = "(size > 'txtMinSize.Text' and size< 'txtMaxSize.Text')";
-            //txtMinSize.Text = null;
-            //txtMaxSize.Text = null;
-
-            //this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
-            //this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
-
-            //this.tFileBindingSource.Filter = "(size > 0 and size< 20)";
-
             try
             {
-               
-
-                if (txtMinSize.Text != "" && txtMinSize.Text != "") //оба заполнены
+                if (txtMinSize.Text != "" && txtMaxSize.Text != "") //оба заполнены
                 {
-                    this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
-                    this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
+                    tFileBindingSource.Filter = null;
+                    this.tFileBindingSource.Filter = "size >= '" + int.Parse(txtMinSize.Text) + "'";
+                    this.tFileBindingSource.Filter = "size <= '" + int.Parse(txtMaxSize.Text) + "'";
                 }
-                else if (txtMinSize.Text == "" && txtMinSize.Text == "") //оба пустые 
+                else if (txtMinSize.Text == "" && txtMaxSize.Text == "") //оба пустые 
                 {
                     MessageBox.Show("Поля min и max размер не заполнены");
                 }
                 else if (txtMinSize.Text != "" && txtMaxSize.Text == "") //заполнен только min
                 {
-                    this.tFileBindingSource.Filter = "size >= '" + txtMinSize.Text + "'";
+                    tFileBindingSource.Filter = null;
+                    this.tFileBindingSource.Filter = "size >= '" + int.Parse(txtMinSize.Text) + "'";
                 }
                 else if (txtMaxSize.Text != "" && txtMinSize.Text == "") //заполнен только max
                 {
-                    this.tFileBindingSource.Filter = "size <= '" + txtMaxSize.Text + "'";
+                    tFileBindingSource.Filter = null;
+                    this.tFileBindingSource.Filter = "size <= '" + int.Parse(txtMaxSize.Text) + "'";
                 }
-
             }
 
             catch (Exception ex)
             {
-                //MessageBox.Show("Минимальный и максимальный размер не заполнены!!!!!!!!!!!!");
                 MessageBox.Show(ex.Message);
             }
-
-
         }
 
 
