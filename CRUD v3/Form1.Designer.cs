@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,14 +69,16 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSearch.BackColor = System.Drawing.Color.Azure;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSearch.DisplayFocus = true;
             this.btnSearch.ForeColor = System.Drawing.Color.Navy;
-            this.btnSearch.Location = new System.Drawing.Point(323, 72);
+            this.btnSearch.Location = new System.Drawing.Point(536, 72);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 26);
+            this.btnSearch.Size = new System.Drawing.Size(44, 39);
             this.btnSearch.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Поиск";
             this.btnSearch.UseCustomForeColor = true;
             this.btnSearch.UseSelectable = true;
             this.btnSearch.UseStyleColors = true;
@@ -184,19 +186,18 @@
             // 
             // 
             this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(268, 2);
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(473, 1);
             this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(37, 37);
             this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearch.CustomButton.TabIndex = 1;
             this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtSearch.CustomButton.UseSelectable = true;
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.DisplayIcon = true;
-            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
             this.txtSearch.Lines = new string[0];
             this.txtSearch.Location = new System.Drawing.Point(23, 72);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(16, 5, 9, 0);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -208,7 +209,7 @@
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
             this.txtSearch.ShowClearButton = true;
-            this.txtSearch.Size = new System.Drawing.Size(292, 26);
+            this.txtSearch.Size = new System.Drawing.Size(511, 39);
             this.txtSearch.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearch.TabIndex = 4;
             this.txtSearch.UseCustomBackColor = true;
@@ -410,7 +411,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(771, 530);
+            this.ClientSize = new System.Drawing.Size(763, 530);
             this.Controls.Add(this.btnSizeFilter);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnCallFormLogin);
