@@ -20,25 +20,30 @@ namespace CRUD_v3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "searchBaseDataSetTFileWithoutID.TFile". При необходимости она может быть перемещена или удалена.
-            this.tFileTableAdapter.Fill(this.searchBaseDataSetTFileWithoutID.TFile);
-            metroGrid1.Columns[0].Width = 120;
-            metroGrid1.Columns[1].Width = 120;
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "searchBaseTFileNewWithoutID.TFileNew". При необходимости она может быть перемещена или удалена.
+            this.tFileNewTableAdapter.Fill(this.searchBaseTFileNewWithoutID.TFileNew);
+            //// TODO: данная строка кода позволяет загрузить данные в таблицу "searchBaseDataSetTFileWithoutID.TFile". При необходимости она может быть перемещена или удалена.
+            ////this.tFileTableAdapter.Fill(this.searchBaseDataSetTFileWithoutID.TFile);
+            metroGrid1.Columns[0].Width = 280;
+            metroGrid1.Columns[1].Width = 60;
             metroGrid1.Columns[2].Width = 50;
             metroGrid1.Columns[3].Width = 50;
-            metroGrid1.Columns[4].Width = 150;
+            metroGrid1.Columns[4].Width = 50;
+            metroGrid1.Columns[5].Width = 20;
+
         }
 
         //  Поиск по названию
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            tFileBindingSource.Filter = null;
+            //tFileNewBindingSource.Filter = null;
+            tFileNewBindingSource.Filter = null;
             try
             {
                 foreach (DataGridViewRow row in metroGrid1.Rows)
                 {
                     row.Selected = false;
-                    this.tFileBindingSource.Filter = "(name LIKE '" + txtSearch.Text + "*')";
+                    this.tFileNewBindingSource.Filter = "(name LIKE '" + txtSearch.Text + "*')";
                 }
             }
 
@@ -51,26 +56,31 @@ namespace CRUD_v3
         //Радиокнопки по формату
         private void rbDoc_CheckedChanged(object sender, EventArgs e)
         {
-            tFileBindingSource.Filter = null;
-            this.tFileBindingSource.Filter = "(format LIKE 'doc')";
+            //tFileNewBindingSource.Filter = null;
+            tFileNewBindingSource.Filter = null;
+            //this.tFileNewBindingSource.Filter = "(format LIKE 'doc')";
+            this.tFileNewBindingSource.Filter = "(format LIKE 'doc')";
         }
 
         private void rbDocx_CheckedChanged(object sender, EventArgs e)
         {
-            tFileBindingSource.Filter = null;
-            this.tFileBindingSource.Filter = "(format LIKE 'docx')";
+            //tFileNewBindingSource.Filter = null;
+            tFileNewBindingSource.Filter = null;
+            this.tFileNewBindingSource.Filter = "(format LIKE 'docx')";
         }
 
         private void rbTxt_CheckedChanged(object sender, EventArgs e)
         {
-            tFileBindingSource.Filter = null;
-            this.tFileBindingSource.Filter = "(format LIKE 'txt')";
+            //tFileNewBindingSource.Filter = null;
+            tFileNewBindingSource.Filter = null;
+            this.tFileNewBindingSource.Filter = "(format LIKE 'txt')";
         }
 
         private void rbRtf_CheckedChanged(object sender, EventArgs e)
         {
-            tFileBindingSource.Filter = null;
-            this.tFileBindingSource.Filter = "(format LIKE 'rtf')";
+            //tFileNewBindingSource.Filter = null;
+            tFileNewBindingSource.Filter = null;
+            this.tFileNewBindingSource.Filter = "(format LIKE 'rtf')";
         }
 
         private void btnCallFormLogin_Click(object sender, EventArgs e)
@@ -94,14 +104,14 @@ namespace CRUD_v3
         //Фильтр по размеру файла
         private void btnSizeFilter_Click(object sender, EventArgs e)
         {
-            tFileBindingSource.Filter = null;
+            tFileNewBindingSource.Filter = null;
             try
             {
                 if (txtMinSize.Text != "" && txtMaxSize.Text != "") //оба заполнены
                 {
-                    tFileBindingSource.Filter = null;
-                    this.tFileBindingSource.Filter = "size >= '" + int.Parse(txtMinSize.Text) + "'";
-                    this.tFileBindingSource.Filter = "size <= '" + int.Parse(txtMaxSize.Text) + "'";
+                    tFileNewBindingSource.Filter = null;
+                    this.tFileNewBindingSource.Filter = "size >= '" + int.Parse(txtMinSize.Text) + "'";
+                    this.tFileNewBindingSource.Filter = "size <= '" + int.Parse(txtMaxSize.Text) + "'";
                 }
                 else if (txtMinSize.Text == "" && txtMaxSize.Text == "") //оба пустые 
                 {
@@ -109,13 +119,13 @@ namespace CRUD_v3
                 }
                 else if (txtMinSize.Text != "" && txtMaxSize.Text == "") //заполнен только min
                 {
-                    tFileBindingSource.Filter = null;
-                    this.tFileBindingSource.Filter = "size >= '" + int.Parse(txtMinSize.Text) + "'";
+                    tFileNewBindingSource.Filter = null;
+                    this.tFileNewBindingSource.Filter = "size >= '" + int.Parse(txtMinSize.Text) + "'";
                 }
                 else if (txtMaxSize.Text != "" && txtMinSize.Text == "") //заполнен только max
                 {
-                    tFileBindingSource.Filter = null;
-                    this.tFileBindingSource.Filter = "size <= '" + int.Parse(txtMaxSize.Text) + "'";
+                    tFileNewBindingSource.Filter = null;
+                    this.tFileNewBindingSource.Filter = "size <= '" + int.Parse(txtMaxSize.Text) + "'";
                 }
             }
 
@@ -124,6 +134,9 @@ namespace CRUD_v3
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
 
         //TODO: сделать, чтобы фильтр по размеру учитывал фильтрацию по формату
 

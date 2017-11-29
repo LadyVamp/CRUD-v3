@@ -98,6 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchBaseDataSetTSearchPattern.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchBaseTFileNewWithoutID.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchBaseTFileNewWithoutID.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +174,17 @@
     </None>
     <None Include="SearchBaseDataSetTSearchPattern.xss">
       <DependentUpon>SearchBaseDataSetTSearchPattern.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBaseTFileNewWithoutID.xsc">
+      <DependentUpon>SearchBaseTFileNewWithoutID.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBaseTFileNewWithoutID.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchBaseTFileNewWithoutID.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SearchBaseTFileNewWithoutID.xss">
+      <DependentUpon>SearchBaseTFileNewWithoutID.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
